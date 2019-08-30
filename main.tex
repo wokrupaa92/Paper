@@ -1,0 +1,122 @@
+\documentclass{appolb}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{ifthen}
+\usepackage{subfig}
+\usepackage{amsmath}
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} 
+\input{lhcb-symbols-def.tex}
+% graphicx package included for placing figures in the text
+%------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        %
+%  BEGINNING OF TEXT              %
+%                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{lineno}
+%\linenumbers
+\begin{document}
+
+\title{RECENT RESULTS OF THE CKM ANGLE \g MEASUREMENT AT LHCB AND PROSPECT FOR RUN III AND RUN IV\footnote{Presented at 3rd Jagiellonian Symposium on Fundamental and Applied Subatomic Physics, Krakow, 23-28 June 2019} }
+\author{Wojciech Krupa \\ on behalf of the \lhcb collaboration 
+\address{AGH University of Science and Technology \\Faculty of Physics and Applied Computer Science \\ al. Mickiewicza 30, 30-059 Krakow, Poland}
+\\
+}
+\maketitle
+\begin{abstract}
+The Standard Model (SM) description of \CP violation can be tested by overconstraining the angles of the Unitary Triangle. Discrepancies between precise measurements of the Cabibbo-Kobayashi-Maskawa (CKM) angle \g in the tree-level and loop dominated processes might provide evidence of physics beyond the Standard Model. New results of the CKM angle \g with special attention to decays from \decay{B}{D K} family are presented in this document.
+
+\end{abstract}
+\PACS{13.20.He, 14.40Nd} 
+
+\section{Introduction}
+The CKM angle \g is defined as $\gamma \equiv \arg(-V_{ud}V_{ub}^{*}/V_{cd}V_{cb}^{*})$.  The CKM matrix elements $V_{ij}$ specify the strength of week transition between quarks $i$ and $j$. The CKM angle \g is the least precise measured parameter of the Unitary Triangle. It can be determined experimentally by exploiting the interference between favored \textit{b} \to \textit{c} and suppressed \textit{b} \to \textit{u} transition amplitudes in tree-level decays of \decay{B}{D K}.
+ Any significant discrepancies between direct measurement in tree-level decay (unaffected by processes which could be related to the effects of Physics Beyond the Standard Model) and loop dominated processes allow to probe unexplored field of science.  
+
+Measurements from the LHCb experiment yield $\gamma=(74.0^{+5.0}_{-5.8})^\circ$ \cite{gamma_B2DK}, \cite{gamma_comb}, which is the most precise determination of \g from a single experiment\footnote{Worthy of notice is that anticipated precision of the CKM angle \g for Run III and IV (years 2021-2023) is 0.4$^\circ$\cite{lhcb_phys_case}}. The precision of the measurement is dominated by the result from the decay $B^+\rightarrow D K^+$. Very recent analysis of $B^0\rightarrow D K^{*0}$ with $D$ mesons decaying to two and four particles final state included data from the Run I and Run II periods collected at centre-of-mass energies $\sqrt s$ of 7, 8 and 13 TeV in the years 2011-2016 \cite{B2Dkstar0}. The result is in agreement with the previous LHCb measurements and showed the feasibility of the study of new decays with as much as six particles in the final state for the evaluation the CKM angle \g.  
+
+Another useful and promising set of processes is $B^0_s$ decays to vector mesons: $B^0_s \rightarrow D_s^* K$,  $B^0_s \rightarrow D_s K^*$ and $B^0_s \rightarrow D_s^* K^*$. The last two have not been observed yet and the searches for appropriate candidates in the whole data from Run I and Run II are ongoing. Due to the complicated topology, this analysis is preceded by the study of simulated data sample to establish a various sources of background that may influence the measurement.
+
+
+\section{Preliminary studies of background in $B^0_s \rightarrow D_s^* K^*$ decay}
+
+Decay $B^0_s \rightarrow D_s^* K^*$, where $D^*_s\rightarrow D_s \gamma$ and $K^*\rightarrow K^0_s \pi$, proceeds through two vector resonances which are reconstructed by six charged particles (including $K^0$) and \g. 
+
+ One can expect three type of background components: partially reconstructed decays, where one particle in similar decay is missing and it may lead to the same final state, enhancement in the signal caused by the wrong identification of one or more particles, and combinatorial background - random combination of the particles from the final states. 
+ The latter can be greatly removed by selection criteria and multivariate analysis. Analysis of the first two background contributions is done using data simulated with the Monte Carlo methods (MC).
+
+The production of MC data is run by the central software of the LHCb experiment. The simulation that includes the full event reconstruction takes a lot of CPU time. The simplified simulation, should be therefore used beforehand to study the possible background contributions to the signal events.
+
+The RapidSim package \cite{rapidsim} uses a simplified models for the very fast study of kinematics of potential background decays. It allows for the estimation of the possible physical contributions. However, it cannot be used in calculation of efficiencies due to lack of track reconstruction of decay chain. 
+
+The decay $B^0_s \rightarrow D_s^* K^*$ with $D_s^*\rightarrow D_s \gamma$ and $K^*\rightarrow K^0 \pi$ is characterised by two resonance states: $D_s^*$ and $K^*$. It is therefore hardly possible to find  decays which would be partially reconstructed and result in such a complex final state. The fast simulation of decays with the $\pi^0$ meson and without one \g reconstructed like: $B^0 \rightarrow D^{*+}(2010) K^{*-}$, $D^{*+}(2010)\rightarrow D^+ \pi^0$ showed events well below the $B^0_s$ mass.
+
+Beside the presence of two resonances, one can expect also the non-resonant contributions of the type: $B^0_s \rightarrow D_s \gamma  K^0 \pi$,  which can pass through the selection criteria.  Fig. \ref{Fig:F2} shows the comparison of mass distributions $K^0 \pi$ and $D_s \gamma$ https://www.overleaf.com/project/5d549586dcebc058d983b7c3candidates for resonant and non-resonant mode. Although the requirement that one should select events from the region that is compatible with the signal events (red lines in Fig. \ref{Fig:F2}) will remove most of this background, the non-resonant contribution must be included in the model which describes the reconstructed signal events.
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.5\textwidth}
+  \centering
+\includegraphics[width=6.5 cm]{Kstar.png}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \centering
+\includegraphics[width= 6.5 cm]{Dstar.png}
+\end{minipage}%
+\caption{Mass  of $K^0 \pi$ system (left) and $D_s \g$ (right).
+The red line shows the decays with resonances $K^*$ and $D_s^*$ respectively.} 
+\label{Fig:F2}
+\end{figure}
+
+The other possible source of background is misidentification of one pion as kaon in the final state of $D$ meson decay. Such a $D$ meson can be mistaken as $D_s$ meson which mainly decays to $K K \pi$ final state. In Fig. \ref{Fig:F3} (left-hand side) the distribution of the mass of $D \rightarrow K \pi \pi$ and the mass in case when 5\% of pions are identified as kaons are shown. Therefore, one need to exclude, in the selection of the real data, events that are compatible with $D$ meson decay when the identification is changed from $\pi$  to $K$.  
+
+Three decays: $B^0 \rightarrow D^* K^*$, $B^0 \rightarrow D^*_s K^*$ and the signal decay $B_s^0\rightarrow D^*_s K^*$ are expected on the mass distribution of the $D_{(s)} \gamma K^0_s \pi$ system. It is also possible that states: $D_s K^0_s \pi$, $D K^0_s \pi$, $D 3\pi$, $D_s 3\pi$ and  $D^*(2010)K^0_s \pi$ with $D^*(2010)\rightarrow D^+ \pi$, combined with a random, soft photon could mimic the signal decay $ B^0_s\rightarrow D^*_s K^*$. The size of possible contributions depends on the probability of the $B^0$ and $B^0_s$ production and branching fraction of the respective decays. Position of these background processes on the $D_s \g K^0 \pi$ system mass is depicted in Fig. \ref{Fig:F3} (right-hand side). It is assumed that random \g is added to each event and distributions are normalized to $B^0\rightarrow D^*K^*$ mode, which is (3.3 $\pm$ 0.7)$\cdot$10$^{-4}$ \cite{pdg_group}. 
+
+Background studies showed that mass of the combination of  $B^0 \rightarrow DK^*$ decay with a random, soft photon is in the region of  $B_s^0 \rightarrow D^*_s K^*$ mass. It means that such events can be mistaken as signal decay. Process $B_s^0\rightarrow D_s K^*$ decay with random photon is visible above the $B^0_s$ nominal mass.
+The contribution of the decay $B^0 \rightarrow D_sK^*$ is small
+due to the lower branching fraction in comparison with the signal mode. This analysis showed that the above processes should be simulated by a full simulation chain in the spectrometer to obtain reliable parametrisation of the mass shapes that can be used in the fit model to real data collected at the LHCb.
+
+\begin{figure}[h!]
+\begin{minipage}{0.5\textwidth}
+  \centering
+\includegraphics[width=6.2 cm]{D3.png}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \centering
+\includegraphics[width= 6.7 cm]{B_new.png}
+\end{minipage}%
+\caption{Mass distribution of $D \to K \pi \pi$ candidates (red line), $D_s \to K K \pi$ candidates (blue line) and $K\pi\pi$ system where one pion is misidentified as kaon (red, dash line ) - left plot.
+Mass distribution of $D_s \gamma K_s \pi$ candidates for signal modes and potential background processes. The dashed histograms show decays combined with the soft, random photon (right).}
+\label{Fig:F3}
+\end{figure}
+
+\section{Acknowledges}
+This research was supported in part by the National Research Centre, Poland
+(NCN), grant No. XXXXXX and by the Faculty of Physics and Applied Computer Science AGH University
+
+\begin{thebibliography}{3}
+\bibitem{lhcb_phys_case}
+Aaij, R., et al. [\lhcb collaboration],CERN-LHCC-2018-027.
+%Physics case for an LHCb Upgrade II
+\bibitem{gamma_B2DK}
+Aaij, R., et al. [\lhcb collaboration],  LHCb-CONF-2018-002, 2018.
+%Update of the LHCb combination of the CKM angle  using $B\rightarrow DK$  decays,
+\bibitem{gamma_comb}
+Aaij, R., et al. [\lhcb collaboration], JHEP 12 (2016) 087.
+%Measurement of the CKM angle from a combi-nation of LHCb results , arXiv:1611.03076.
+\bibitem{B2Dkstar0}
+Aaij, R., et al. [\lhcb collaboration], J. High Energ. Phys. (2019) 41. 
+%Measurement of CP observables in the process B0→DK∗0 with two- and four-body D decays 
+\bibitem{rapidsim}
+Cowan, G.A., Craik, D.C., Needham, M.D., Comput. Phys. Commun., 214 (2017), p. 239
+%RapidSim: An application for the fast simulation of heavy-quark hadron decays. Computer Physics Communications. 10.1016/j.cpc.2017.01.029. 
+\bibitem{pdg_group}
+M, Tanabashi, et al. Particle Data Group Phys, Rev. D 98, 030001 (2018). 
+%Review of Particle Physics
+\end{thebibliography}
+
+
+
+\end{document}
+
